@@ -17,4 +17,4 @@ ENV NODE_ENV production
 
 # replace this with your application's default port
 EXPOSE 7001
-CMD npm run dev
+CMD npm run debug

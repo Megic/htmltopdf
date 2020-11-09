@@ -5,5 +5,5 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  router.get('/htmltopdf', controller.home.index);
+  router.get('/', controller.home.index);
 };
