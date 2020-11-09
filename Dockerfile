@@ -8,10 +8,7 @@ RUN apt-get update \
     && apt-get update \
     && apt-get install -y google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 \
       --no-install-recommends \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get install language-pack-zh-hant language-pack-zh-hans \
-    && apt-get install fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming
-
+    && rm -rf /var/lib/apt/lists/* 
 ADD . /usr/src/app
 WORKDIR /usr/src/app
 
