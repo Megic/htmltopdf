@@ -19,7 +19,7 @@ class HomeController extends Controller {
       const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-dev-shm-usage', '--ignore-certificate-errors']});
       const page = await browser.newPage();
       await page.goto(decodeURIComponent(url), {waitUntil: 'networkidle2'});
-      await page.pdf({path: prePath+filePath});
+      await page.pdf({path: prePath+filePath,preferCSSPageSize:true});
       browser.close();
       ctx.body = {
         url:filePath
