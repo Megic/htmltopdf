@@ -1,4 +1,4 @@
-FROM node:12.18.2-alpine
+FROM node:12-slim
 LABEL maintainer="megic@wiredmed.com"
 
 RUN apt-get update \
