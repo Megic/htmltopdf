@@ -10,11 +10,6 @@ RUN apt-get update \
       --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
-    # 设置时区
-RUN apk --update add tzdata \
-    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && echo "Asia/Shanghai" > /etc/timezone \
-    && apk del tzdata
 
 ADD . /usr/src/app
 WORKDIR /usr/src/app

@@ -16,7 +16,7 @@ class HomeController extends Controller {
       fs.ensureDir(prePath+fullpath);//创建缓存目录
       const filePath = fullpath+uuidv4().replace(/\-/g, '')+'.pdf'
       // console.log(filePath)
-      const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-dev-shm-usage']});
+      const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-dev-shm-usage', '--ignore-certificate-errors']});
       const page = await browser.newPage();
       await page.goto(url, {waitUntil: 'networkidle2'});
       await page.pdf({path: prePath+filePath});
