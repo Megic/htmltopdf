@@ -24,7 +24,7 @@ class HomeController extends Controller {
       if(data)  {
       await page.goto(decodeURIComponent(url));
         await page.evaluate((data) => {
-            window.localStorage.setItem("PRINTDATA", JSON.stringify(data));
+            window.localStorage.setItem("PRINTDATA", data);
         },data)
       }
       await page.goto(decodeURIComponent(url), {waitUntil: 'networkidle2'});
