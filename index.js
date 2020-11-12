@@ -1,6 +1,6 @@
 require('egg').startCluster({
   baseDir: __dirname,
   workers: process.env.WORKERS,
-  port: process.env.PORT,
+  port: process.env.PORT||7004,
   sticky: true,
 });
