@@ -19,5 +19,5 @@ RUN npm install
 ENV NODE_ENV production
 
 # replace this with your application's default port
-EXPOSE 7001
+EXPOSE 7004
 CMD npm run start

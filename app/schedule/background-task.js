@@ -9,7 +9,7 @@ module.exports = app => {
   // 通过 schedule 属性来设置定时任务的执行间隔等配置
     static get schedule() {
       return {
-        interval: '2s', // 1 分钟间隔
+        interval: '24h', // 1 分钟间隔
         type: 'worker', // 单worker执行
       };
     }
